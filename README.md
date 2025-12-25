@@ -63,8 +63,9 @@ HomeVision AI, evinizdeki kameralar aracılığıyla:
 
 ### ♿ Erişilebilirlik: Görme Engelli Kullanıcı Senaryoları
 
-> 💡 **Konsept:** Kameralar, görme engelli bireyin **gözleri** olur. Akıllı hoparlör entegrasyonu ile ev hakkında anlık, sesli bilgi alabilirler.
+> 💡 **Konsept:** Kameralar, görme engelli bireyin **gözleri** olur. Akıllı hoparlör veya kulaklık entegrasyonu ile ev hakkında anlık, sesli bilgi alabilirler.
 
+#### Soru-Cevap Modu
 ```
 👤 "Mutfakta ne var?"
 🤖 "Mutfakta kimse yok. Tezgahın üzerinde bir tabak ve bardak var. 
@@ -81,13 +82,38 @@ HomeVision AI, evinizdeki kameralar aracılığıyla:
 🤖 "Son gördüğüm yer: Salon, sehpanın üzeri. 2 saat önce."
 
 👤 "Evde başka kim var?"
-🤖 "Ahmet çalışma odasında, annenizelektör yatak odasında dinleniyor."
+🤖 "Ahmet çalışma odasında, anneniz yatak odasında dinleniyor."
+```
 
-🔔 [Proaktif Uyarı]
+#### 🔴 Gerçek Zamanlı Mod (Real-time Awareness)
+
+> **Kulaklık ile sürekli çevresel farkındalık** - Kullanıcı hareket ederken veya otururken arka planda olan her şeyi bilir.
+
+```
+🎧 [Sürekli Mod - Kulaklıktan]
+
+🤖 "Arkandan Ahmet geliyor, 3 metre uzakta."
+
+🤖 "Solunda kedi, dikkat et."
+
+🤖 "Önünde sandalye var, sağa doğru ilerle."
+
+🤖 "Mutfağa girdin. Tezgah solunda, buzdolabı karşında."
+
+🤖 "Ayşe arkandan sesleniyor."
+
+🤖 "Yere bir şey düştü, sağ tarafında."
+
+🤖 "Kapı açıldı, biri eve girdi... Ahmet."
+```
+
+#### 🔔 Proaktif Uyarılar
+```
 🤖 "Dikkat: Mutfakta ocak 10 dakikadır açık ama kimse yok."
 
-🔔 [Proaktif Uyarı]
-🤖 "Kapı zili çaldı. Kapıda bir kargo görevlisi var, elinde paket tutuyör."
+🤖 "Kapı zili çaldı. Kapıda bir kargo görevlisi var, elinde paket tutuyor."
+
+🤖 "Su sesi geliyor, banyo musluğu açık kalmış olabilir."
 ```
 
 ### Dashboard Özellikleri

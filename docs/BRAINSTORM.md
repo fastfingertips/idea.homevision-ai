@@ -34,6 +34,16 @@ Bu sistem sadece bir "ev otomasyonu" değil, engelli bireyler için **yaşam de�
 - Proaktif uyarılar ("Ocak açık kaldı!")
 - Kapı zili + kişi tanıma ("Kapıda kargo görevlisi var")
 
+### 🔴 Real-time Awareness Modu (YENİ!)
+> Kulaklık ile **sürekli çevresel farkındalık**
+
+- Arkadan gelen kişileri bildirme
+- Yürürken engel uyarısı
+- Odaya girerken ortam tasviri
+- Düşen nesneleri bildirme
+- Ev içi hareketleri anlatma
+- **"Arkasındaki gözler"** - Kullanıcının göremeyeceği alanları sürekli izleme
+
 ### İşitme Engelliler İçin
 - Ses olaylarını görsel/titreşim bildirimine çevirme
 - Akıllı ampullerle entegrasyon
