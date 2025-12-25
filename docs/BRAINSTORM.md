@@ -1,4 +1,4 @@
-# 🧠 Beyin Fırtınası Notları
+# Beyin Fırtınası Notları
 
 Bu dosya, fikir geliştikçe eklenen notları içerir.
 
@@ -19,7 +19,7 @@ Bu dosya, fikir geliştikçe eklenen notları içerir.
 
 ---
 
-## 2024-12-26 - Erişilebilirlik Boyutu 🔥
+## 2024-12-26 - Erişilebilirlik Boyutu
 
 ### Büyük İçgörü
 > **"Kameralar, görme engelli bireylerin GÖZLERİ olabilir!"**
@@ -34,7 +34,7 @@ Bu sistem sadece bir "ev otomasyonu" değil, engelli bireyler için **yaşam de�
 - Proaktif uyarılar ("Ocak açık kaldı!")
 - Kapı zili + kişi tanıma ("Kapıda kargo görevlisi var")
 
-### 🔴 Real-time Awareness Modu (YENİ!)
+### Real-time Awareness Modu
 > Kulaklık ile **sürekli çevresel farkındalık**
 
 - Arkadan gelen kişileri bildirme
@@ -64,5 +64,3 @@ Bu sistem sadece bir "ev otomasyonu" değil, engelli bireyler için **yaşam de�
 ## Gelecek Fikirler
 
 *Yeni fikirler buraya eklenecek...*
-
-

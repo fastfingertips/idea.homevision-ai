@@ -1,17 +1,17 @@
-# 🏠 idea.homevision-ai
+# idea.homevision-ai
 
 **Akıllı Ev Aktivite Zekası**
 
-> **⚠️ CONCEPT REPOSITORY** - Bu repo bir fikir/konsept deposudur. Henüz implementasyon içermez.  
+> **CONCEPT REPOSITORY** - Bu repo bir fikir/konsept deposudur. Henüz implementasyon içermez.  
 > `idea.*` prefix'i: Sadece fikir aşamasında olan, henüz kodlanmamış projeler için.
 
-## 🎯 Vizyon
+## Vizyon
 
 Evinizin her odasının köşelerinde konumlandırılmış kameralar aracılığıyla, aile bireylerinin günlük aktivitelerini otomatik olarak izleyen, loglayan ve doğal dil sorularına yanıt verebilen bir yapay zeka sistemi.
 
 ---
 
-## 💡 Problem
+## Problem
 
 ### Genel Kullanıcılar
 - Gün içinde kaç bardak su içtiğinizi hatırlamıyorsunuz
@@ -20,13 +20,13 @@ Evinizin her odasının köşelerinde konumlandırılmış kameralar aracılığ
 - Yaşlı aile üyelerinin aktivite seviyelerini takip etmek istiyorsunuz
 - "Son zamanlarda az mı hareket ediyorum?" sorusuna objektif bir yanıt arıyorsunuz
 
-### ♿ Engelli Bireyler
+### Engelli Bireyler
 - **Görme engelli** bireyler ev içinde bağımsız hareket etmekte zorlanıyor
 - Nesnelerin yerini bulmak için sürekli yardıma ihtiyaç duyuyorlar
 - Evin durumu hakkında anlık bilgi alamıyorlar
 - Mevcut asistan teknolojileri (Alexa, Google Home) sadece sesli komutlara yanıt veriyor, **proaktif bilgi sağlamıyor**
 
-## ✨ Çözüm
+## Çözüm
 
 HomeVision AI, evinizdeki kameralar aracılığıyla:
 
@@ -38,96 +38,88 @@ HomeVision AI, evinizdeki kameralar aracılığıyla:
 
 ---
 
-## 🔮 Örnek Kullanım Senaryoları
+## Örnek Kullanım Senaryoları
 
 ### Soru-Cevap Örnekleri
 
 ```
-👤 "Bugün kaç bardak su içtim?"
-🤖 "Bugün toplam 6 bardak su içtiniz. Son içtiğiniz 14:32'de mutfaktaydı."
+User: "Bugün kaç bardak su içtim?"
+AI:   "Bugün toplam 6 bardak su içtiniz. Son içtiğiniz 14:32'de mutfaktaydı."
 
-👤 "Az önce kaç şınav çektim?"
-🤖 "Son 5 dakika içinde 23 şınav çektiniz. Ortalama tempo: 12 şınav/dakika."
+User: "Az önce kaç şınav çektim?"
+AI:   "Son 5 dakika içinde 23 şınav çektiniz. Ortalama tempo: 12 şınav/dakika."
 
-👤 "Bu hafta en çok hangi odada vakit geçirdim?"
-🤖 "Bu hafta en çok oturma odasında vakit geçirdiniz (toplam 28 saat). 
-    İkinci sırada çalışma odası (18 saat)."
+User: "Bu hafta en çok hangi odada vakit geçirdim?"
+AI:   "Bu hafta en çok oturma odasında vakit geçirdiniz (toplam 28 saat). 
+       İkinci sırada çalışma odası (18 saat)."
 
-👤 "Çocuklar bugün ne kadar TV izledi?"
-🤖 "Ahmet 2 saat 15 dakika, Ayşe 45 dakika TV izledi."
+User: "Çocuklar bugün ne kadar TV izledi?"
+AI:   "Ahmet 2 saat 15 dakika, Ayşe 45 dakika TV izledi."
 
-👤 "Kedim bugün ne yaptı?"
-🤖 "Luna bugün çoğunlukla yatak odasında uyudu (6 saat), 
-    3 kez mama kabına gitti ve 45 dakika pencere kenarında oturdu."
+User: "Kedim bugün ne yaptı?"
+AI:   "Luna bugün çoğunlukla yatak odasında uyudu (6 saat), 
+       3 kez mama kabına gitti ve 45 dakika pencere kenarında oturdu."
 ```
 
-### ♿ Erişilebilirlik: Görme Engelli Kullanıcı Senaryoları
+### Erişilebilirlik: Görme Engelli Kullanıcı Senaryoları
 
-> 💡 **Konsept:** Kameralar, görme engelli bireyin **gözleri** olur. Akıllı hoparlör veya kulaklık entegrasyonu ile ev hakkında anlık, sesli bilgi alabilirler.
+> **Konsept:** Kameralar, görme engelli bireyin **gözleri** olur. Akıllı hoparlör veya kulaklık entegrasyonu ile ev hakkında anlık, sesli bilgi alabilirler.
 
 #### Soru-Cevap Modu
 ```
-👤 "Mutfakta ne var?"
-🤖 "Mutfakta kimse yok. Tezgahın üzerinde bir tabak ve bardak var. 
-    Buzdolabının kapağı kapalı. Ocak kapalı durumda."
+User: "Mutfakta ne var?"
+AI:   "Mutfakta kimse yok. Tezgahın üzerinde bir tabak ve bardak var. 
+       Buzdolabının kapağı kapalı. Ocak kapalı durumda."
 
-👤 "Oturma odasında kim var?"
-🤖 "Oturma odasında Ayşe koltukta oturuyor. TV açık."
+User: "Oturma odasında kim var?"
+AI:   "Oturma odasında Ayşe koltukta oturuyor. TV açık."
 
-👤 "Kapıya giden yol nasıl?"
-🤖 "Önünüzde 3 metre düz yol var. Solda sandalye var, dikkat edin. 
-    Kapı sağda, 4 adım sonra."
+User: "Kapıya giden yol nasıl?"
+AI:   "Önünüzde 3 metre düz yol var. Solda sandalye var, dikkat edin. 
+       Kapı sağda, 4 adım sonra."
 
-👤 "Gözlüklerimi nereye koydum?"
-🤖 "Son gördüğüm yer: Salon, sehpanın üzeri. 2 saat önce."
+User: "Gözlüklerimi nereye koydum?"
+AI:   "Son gördüğüm yer: Salon, sehpanın üzeri. 2 saat önce."
 
-👤 "Evde başka kim var?"
-🤖 "Ahmet çalışma odasında, anneniz yatak odasında dinleniyor."
+User: "Evde başka kim var?"
+AI:   "Ahmet çalışma odasında, anneniz yatak odasında dinleniyor."
 ```
 
-#### 🔴 Gerçek Zamanlı Mod (Real-time Awareness)
+#### Gerçek Zamanlı Mod (Real-time Awareness)
 
 > **Kulaklık ile sürekli çevresel farkındalık** - Kullanıcı hareket ederken veya otururken arka planda olan her şeyi bilir.
 
 ```
-🎧 [Sürekli Mod - Kulaklıktan]
+[Sürekli Mod - Kulaklıktan]
 
-🤖 "Arkandan Ahmet geliyor, 3 metre uzakta."
-
-🤖 "Solunda kedi, dikkat et."
-
-🤖 "Önünde sandalye var, sağa doğru ilerle."
-
-🤖 "Mutfağa girdin. Tezgah solunda, buzdolabı karşında."
-
-🤖 "Ayşe arkandan sesleniyor."
-
-🤖 "Yere bir şey düştü, sağ tarafında."
-
-🤖 "Kapı açıldı, biri eve girdi... Ahmet."
+AI: "Arkandan Ahmet geliyor, 3 metre uzakta."
+AI: "Solunda kedi, dikkat et."
+AI: "Önünde sandalye var, sağa doğru ilerle."
+AI: "Mutfağa girdin. Tezgah solunda, buzdolabı karşında."
+AI: "Ayşe arkandan sesleniyor."
+AI: "Yere bir şey düştü, sağ tarafında."
+AI: "Kapı açıldı, biri eve girdi... Ahmet."
 ```
 
-#### 🔔 Proaktif Uyarılar
+#### Proaktif Uyarılar
 ```
-🤖 "Dikkat: Mutfakta ocak 10 dakikadır açık ama kimse yok."
-
-🤖 "Kapı zili çaldı. Kapıda bir kargo görevlisi var, elinde paket tutuyor."
-
-🤖 "Su sesi geliyor, banyo musluğu açık kalmış olabilir."
+AI: "Dikkat: Mutfakta ocak 10 dakikadır açık ama kimse yok."
+AI: "Kapı zili çaldı. Kapıda bir kargo görevlisi var, elinde paket tutuyor."
+AI: "Su sesi geliyor, banyo musluğu açık kalmış olabilir."
 ```
 
 ### Dashboard Özellikleri
 
-- 📊 Günlük/Haftalık/Aylık aktivite raporları
-- 👨‍👩‍👧‍👦 Aile üyesi bazlı istatistikler
-- 🏃 Hareket ve egzersiz takibi
-- 💧 Su/yemek tüketim tahmini
-- 😴 Uyku düzeni analizi
-- 🎯 Kişisel hedefler ve hatırlatmalar
+- Günlük/Haftalık/Aylık aktivite raporları
+- Aile üyesi bazlı istatistikler
+- Hareket ve egzersiz takibi
+- Su/yemek tüketim tahmini
+- Uyku düzeni analizi
+- Kişisel hedefler ve hatırlatmalar
 
 ---
 
-## 🏗️ Teknik Mimari (Konsept)
+## Teknik Mimari (Konsept)
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -135,8 +127,8 @@ HomeVision AI, evinizdeki kameralar aracılığıyla:
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐             │
-│  │  📷 Kamera  │  │  📷 Kamera  │  │  📷 Kamera  │  ...        │
-│  │  (Oda 1)    │  │  (Oda 2)    │  │  (Oda 3)    │             │
+│  │   Kamera    │  │   Kamera    │  │   Kamera    │  ...        │
+│  │   (Oda 1)   │  │   (Oda 2)   │  │   (Oda 3)   │             │
 │  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘             │
 │         │                │                │                     │
 │         └────────────────┼────────────────┘                     │
@@ -148,7 +140,7 @@ HomeVision AI, evinizdeki kameralar aracılığıyla:
 │                          │                                      │
 │                          ▼                                      │
 │  ┌───────────────────────────────────────────────────────────┐ │
-│  │               🧠 AI PROCESSING ENGINE                     │ │
+│  │                 AI PROCESSING ENGINE                      │ │
 │  │  ┌─────────────────┐  ┌─────────────────┐                │ │
 │  │  │ Person Detection │  │ Action Recognition│               │ │
 │  │  │ & Identification │  │ (YOLO + Custom)  │               │ │
@@ -161,7 +153,7 @@ HomeVision AI, evinizdeki kameralar aracılığıyla:
 │                          │                                      │
 │                          ▼                                      │
 │  ┌───────────────────────────────────────────────────────────┐ │
-│  │                  📝 ACTIVITY LOG DB                       │ │
+│  │                    ACTIVITY LOG DB                        │ │
 │  │  ┌─────────────────────────────────────────────────────┐ │ │
 │  │  │ timestamp | person | room | action | details | conf │ │ │
 │  │  │ 14:32:01  | Ahmet  | mutfak| su içti| 1 bardak| 0.94│ │ │
@@ -172,7 +164,7 @@ HomeVision AI, evinizdeki kameralar aracılığıyla:
 │                          │                                      │
 │                          ▼                                      │
 │  ┌───────────────────────────────────────────────────────────┐ │
-│  │              🗣️ NATURAL LANGUAGE INTERFACE                │ │
+│  │               NATURAL LANGUAGE INTERFACE                  │ │
 │  │         (LLM + RAG over Activity Logs)                   │ │
 │  │                                                           │ │
 │  │  User: "Bugün kaç bardak su içtim?"                      │ │
@@ -185,7 +177,7 @@ HomeVision AI, evinizdeki kameralar aracılığıyla:
 │         ┌────────────────┼────────────────┐                     │
 │         ▼                ▼                ▼                     │
 │  ┌───────────┐    ┌───────────┐    ┌───────────┐               │
-│  │ 📱 Mobile │    │ 💻 Web    │    │ 🔊 Voice  │               │
+│  │  Mobile   │    │    Web    │    │   Voice   │               │
 │  │    App    │    │ Dashboard │    │ Assistant │               │
 │  └───────────┘    └───────────┘    └───────────┘               │
 │                                                                 │
@@ -194,40 +186,40 @@ HomeVision AI, evinizdeki kameralar aracılığıyla:
 
 ---
 
-## 🎯 Tanınacak Aktiviteler
+## Tanınacak Aktiviteler
 
 ### Temel Aktiviteler
 | Aktivite | Detay |
 |----------|-------|
-| 💧 Su/İçecek İçme | Bardak sayısı, içecek türü tahmini |
-| 🍽️ Yemek Yeme | Öğün zamanları, süre |
-| 🚶 Yürüme | Adım tahmini, oda geçişleri |
-| 🧘 Egzersiz | Tip (şınav, mekik, squat), tekrar sayısı |
-| 📺 TV İzleme | Süre, program değişikliği |
-| 📱 Telefon Kullanımı | Süre |
-| 📖 Okuma | Süre |
-| 💻 Bilgisayar Kullanımı | Süre |
-| 😴 Uyuma/Dinlenme | Başlangıç, bitiş, süre |
-| 🧹 Ev İşleri | Temizlik, bulaşık, çamaşır |
+| Su/İçecek İçme | Bardak sayısı, içecek türü tahmini |
+| Yemek Yeme | Öğün zamanları, süre |
+| Yürüme | Adım tahmini, oda geçişleri |
+| Egzersiz | Tip (şınav, mekik, squat), tekrar sayısı |
+| TV İzleme | Süre, program değişikliği |
+| Telefon Kullanımı | Süre |
+| Okuma | Süre |
+| Bilgisayar Kullanımı | Süre |
+| Uyuma/Dinlenme | Başlangıç, bitiş, süre |
+| Ev İşleri | Temizlik, bulaşık, çamaşır |
 
 ### Gelişmiş Aktiviteler
 | Aktivite | Detay |
 |----------|-------|
-| 👶 Bebek Bakımı | Besleme, bez değiştirme, oyun |
-| 🐱 Evcil Hayvan | Besleme, oyun, veteriner hatırlatmaları |
-| 🎮 Oyun Oynama | Süre, konsol/PC ayrımı |
-| 🎹 Müzik Aleti | Pratik süresi |
-| 🧘‍♀️ Meditasyon/Yoga | Süre, düzenlilik |
+| Bebek Bakımı | Besleme, bez değiştirme, oyun |
+| Evcil Hayvan | Besleme, oyun, veteriner hatırlatmaları |
+| Oyun Oynama | Süre, konsol/PC ayrımı |
+| Müzik Aleti | Pratik süresi |
+| Meditasyon/Yoga | Süre, düzenlilik |
 
 ---
 
-## ♿ Erişilebilirlik Özellikleri
+## Erişilebilirlik Özellikleri
 
 > **"Kameralar onların gözleri olur."**
 
 Bu sistem, engelli bireyler için **hayat değiştirici** potansiyele sahiptir.
 
-### 👁️ Görme Engelli Modu
+### Görme Engelli Modu
 
 | Özellik | Açıklama |
 |---------|----------|
@@ -238,7 +230,7 @@ Bu sistem, engelli bireyler için **hayat değiştirici** potansiyele sahiptir.
 | **Proaktif Uyarılar** | Tehlike durumları (ocak açık, kapı zili, vb.) |
 | **Misafir Tanıma** | Kapıda kim olduğunu sesli bildirme |
 
-### 🦻 İşitme Engelli Modu
+### İşitme Engelli Modu
 
 | Özellik | Açıklama |
 |---------|----------|
@@ -246,7 +238,7 @@ Bu sistem, engelli bireyler için **hayat değiştirici** potansiyele sahiptir.
 | **Dashboard Uyarıları** | Tüm sesli olaylar yazılı log |
 | **Işık Bildirimleri** | Akıllı ampullerle entegrasyon |
 
-### 👴 Yaşlı/Hareket Kısıtlı Mod
+### Yaşlı/Hareket Kısıtlı Mod
 
 | Özellik | Açıklama |
 |---------|----------|
@@ -263,7 +255,7 @@ Bu sistem, engelli bireyler için **hayat değiştirici** potansiyele sahiptir.
 
 ---
 
-## 🔐 Gizlilik ve Güvenlik (Kritik)
+## Gizlilik ve Güvenlik (Kritik)
 
 ### Temel Prensipler
 
@@ -277,11 +269,11 @@ Bu sistem, engelli bireyler için **hayat değiştirici** potansiyele sahiptir.
 ### Gizlilik Bölgeleri
 
 ```
-🔴 Yatak Odası - Sadece hareket sensörü (kamera kapalı)
-🟡 Banyo - Tamamen hariç
-🟢 Salon - Tam izleme
-🟢 Mutfak - Tam izleme
-🟡 Çalışma Odası - Opsiyonel
+[KAPALI] Yatak Odası - Sadece hareket sensörü (kamera kapalı)
+[KAPALI] Banyo - Tamamen hariç
+[AÇIK]   Salon - Tam izleme
+[AÇIK]   Mutfak - Tam izleme
+[OPT]    Çalışma Odası - Opsiyonel
 ```
 
 ### Veri Saklama Politikası
@@ -292,7 +284,7 @@ Bu sistem, engelli bireyler için **hayat değiştirici** potansiyele sahiptir.
 
 ---
 
-## 🛠️ Potansiyel Teknoloji Stack'i
+## Potansiyel Teknoloji Stack'i
 
 ### Donanım
 - Raspberry Pi 5 + AI HAT (her oda için)
@@ -315,7 +307,7 @@ Bu sistem, engelli bireyler için **hayat değiştirici** potansiyele sahiptir.
 
 ---
 
-## 📅 Potansiyel Yol Haritası
+## Potansiyel Yol Haritası
 
 ### Faz 1: MVP (Minimum Viable Product)
 - [ ] Tek oda, tek kamera
@@ -343,17 +335,17 @@ Bu sistem, engelli bireyler için **hayat değiştirici** potansiyele sahiptir.
 
 ---
 
-## 🤔 Açık Sorular
+## Açık Sorular
 
 1. **Poz tahmini doğruluğu**: Düşük ışıkta egzersiz sayımı ne kadar güvenilir?
 2. **Eşya tanıma**: Su bardağı vs kahve fincanı ayrımı mümkün mü?
 3. **Çoklu kişi**: Aynı anda birden fazla kişi aktivite yapınca?
-4. **Gizlilik dengesı**: Misafirler için otomatik bulanıklaştırma?
+4. **Gizlilik dengesi**: Misafirler için otomatik bulanıklaştırma?
 5. **Maliyet**: Tüm ev için tahmini donanım maliyeti?
 
 ---
 
-## 💭 İlham Kaynakları
+## İlham Kaynakları
 
 - Amazon Just Walk Out teknolojisi
 - Google Nest Hub activity tracking
@@ -364,38 +356,30 @@ Bu sistem, engelli bireyler için **hayat değiştirici** potansiyele sahiptir.
 
 ---
 
-## 🌍 Sosyal Etki
+## Sosyal Etki
 
- Bu proje sadece bir "ev otomasyonu" değil, **erişilebilirlik teknolojisi** olarak düşünüldüğünde:
+Bu proje sadece bir "ev otomasyonu" değil, **erişilebilirlik teknolojisi** olarak düşünüldüğünde:
 
-- 🌐 Dünyada **285 milyon** görme engelli birey var (WHO)
-- 🏠 Ev içi bağımsızlık, yaşam kalitesini dramatik artırır
-- 👨‍👩‍👧 Bakıcı/aile yükünü azaltır
-- 🧓 Yaşlanan nüfus için "yerinde yaşlanma" (aging in place) imkanı
+- Dünyada **285 milyon** görme engelli birey var (WHO)
+- Ev içi bağımsızlık, yaşam kalitesini dramatik artırır
+- Bakıcı/aile yükünü azaltır
+- Yaşlanan nüfus için "yerinde yaşlanma" (aging in place) imkanı
 
 > *"Teknoloji, engelleri kaldırmak için var."*
 
 ---
 
-## 📝 Notlar
+## Notlar
 
 *Bu bölüm, fikir geliştikçe güncellenecektir.*
 
-- ...
-
 ---
 
-## 📜 Lisans
+## Lisans
 
 Bu konsept dokümanı [CC BY 4.0](LICENSE) (Creative Commons Attribution 4.0) lisansı altındadır.
 
-- ✅ Paylaşabilirsiniz
-- ✅ Değiştirebilirsiniz
-- ✅ Ticari kullanabilirsiniz
-- ⚠️ **Kaynak göstermek zorundasınız**
-
----
-
-<p align="center">
-  <i>💡 Bir fikir, bir başlangıçtır.</i>
-</p>
+- Paylaşabilirsiniz
+- Değiştirebilirsiniz
+- Ticari kullanabilirsiniz
+- **Kaynak göstermek zorundasınız**
