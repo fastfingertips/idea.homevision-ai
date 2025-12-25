@@ -19,7 +19,40 @@ Bu dosya, fikir geliştikçe eklenen notları içerir.
 
 ---
 
+## 2024-12-26 - Erişilebilirlik Boyutu 🔥
+
+### Büyük İçgörü
+> **"Kameralar, görme engelli bireylerin GÖZLERİ olabilir!"**
+
+Bu sistem sadece bir "ev otomasyonu" değil, engelli bireyler için **yaşam değiştirici** bir teknoloji olabilir.
+
+### Görme Engelliler İçin
+- Akıllı hoparlör (Google Home, Alexa) entegrasyonu
+- Ev hakkında anlık sesli bilgi
+- Nesne konum takibi ("Gözlüklerim nerede?")
+- Oda içi navigasyon ("Kapıya nasıl giderim?")
+- Proaktif uyarılar ("Ocak açık kaldı!")
+- Kapı zili + kişi tanıma ("Kapıda kargo görevlisi var")
+
+### İşitme Engelliler İçin
+- Ses olaylarını görsel/titreşim bildirimine çevirme
+- Akıllı ampullerle entegrasyon
+
+### Yaşlılar İçin
+- Düşme algılama
+- Hareketsizlik uyarısı
+- İlaç hatırlatma (görsel takip)
+
+### Sosyal Etki Potansiyeli
+- Dünyada 285 milyon görme engelli birey (WHO)
+- Bağımsız yaşam = Yaşam kalitesi
+- Bakıcı yükünü azaltma
+- "Yerinde yaşlanma" (aging in place)
+
+---
+
 ## Gelecek Fikirler
 
 *Yeni fikirler buraya eklenecek...*
+
 

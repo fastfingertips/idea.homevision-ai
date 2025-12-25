@@ -13,11 +13,18 @@ Evinizin her odasının köşelerinde konumlandırılmış kameralar aracılığ
 
 ## 💡 Problem
 
+### Genel Kullanıcılar
 - Gün içinde kaç bardak su içtiğinizi hatırlamıyorsunuz
 - Egzersiz yaparken sayı saymayı unuttunuz
 - Çocuğunuzun gün boyunca ne kadar kitap okuduğunu merak ediyorsunuz
 - Yaşlı aile üyelerinin aktivite seviyelerini takip etmek istiyorsunuz
 - "Son zamanlarda az mı hareket ediyorum?" sorusuna objektif bir yanıt arıyorsunuz
+
+### ♿ Engelli Bireyler
+- **Görme engelli** bireyler ev içinde bağımsız hareket etmekte zorlanıyor
+- Nesnelerin yerini bulmak için sürekli yardıma ihtiyaç duyuyorlar
+- Evin durumu hakkında anlık bilgi alamıyorlar
+- Mevcut asistan teknolojileri (Alexa, Google Home) sadece sesli komutlara yanıt veriyor, **proaktif bilgi sağlamıyor**
 
 ## ✨ Çözüm
 
@@ -52,6 +59,35 @@ HomeVision AI, evinizdeki kameralar aracılığıyla:
 👤 "Kedim bugün ne yaptı?"
 🤖 "Luna bugün çoğunlukla yatak odasında uyudu (6 saat), 
     3 kez mama kabına gitti ve 45 dakika pencere kenarında oturdu."
+```
+
+### ♿ Erişilebilirlik: Görme Engelli Kullanıcı Senaryoları
+
+> 💡 **Konsept:** Kameralar, görme engelli bireyin **gözleri** olur. Akıllı hoparlör entegrasyonu ile ev hakkında anlık, sesli bilgi alabilirler.
+
+```
+👤 "Mutfakta ne var?"
+🤖 "Mutfakta kimse yok. Tezgahın üzerinde bir tabak ve bardak var. 
+    Buzdolabının kapağı kapalı. Ocak kapalı durumda."
+
+👤 "Oturma odasında kim var?"
+🤖 "Oturma odasında Ayşe koltukta oturuyor. TV açık."
+
+👤 "Kapıya giden yol nasıl?"
+🤖 "Önünüzde 3 metre düz yol var. Solda sandalye var, dikkat edin. 
+    Kapı sağda, 4 adım sonra."
+
+👤 "Gözlüklerimi nereye koydum?"
+🤖 "Son gördüğüm yer: Salon, sehpanın üzeri. 2 saat önce."
+
+👤 "Evde başka kim var?"
+🤖 "Ahmet çalışma odasında, annenizelektör yatak odasında dinleniyor."
+
+🔔 [Proaktif Uyarı]
+🤖 "Dikkat: Mutfakta ocak 10 dakikadır açık ama kimse yok."
+
+🔔 [Proaktif Uyarı]
+🤖 "Kapı zili çaldı. Kapıda bir kargo görevlisi var, elinde paket tutuyör."
 ```
 
 ### Dashboard Özellikleri
@@ -159,6 +195,48 @@ HomeVision AI, evinizdeki kameralar aracılığıyla:
 
 ---
 
+## ♿ Erişilebilirlik Özellikleri
+
+> **"Kameralar onların gözleri olur."**
+
+Bu sistem, engelli bireyler için **hayat değiştirici** potansiyele sahiptir.
+
+### 👁️ Görme Engelli Modu
+
+| Özellik | Açıklama |
+|---------|----------|
+| **Sahne Tasviri** | Herhangi bir oda hakkında anlık sesli betimleme |
+| **Nesne Konumu** | "Gözlüklerim nerede?" - Son görülen konum |
+| **Navigasyon Yardımı** | Oda içi yönlendirme, engel uyarıları |
+| **Kişi Tespiti** | Evde kim var, nerede, ne yapıyor |
+| **Proaktif Uyarılar** | Tehlike durumları (ocak açık, kapı zili, vb.) |
+| **Misafir Tanıma** | Kapıda kim olduğunu sesli bildirme |
+
+### 🦻 İşitme Engelli Modu
+
+| Özellik | Açıklama |
+|---------|----------|
+| **Ses→Metin** | Kapı zili, alarm gibi sesleri görsel/titreşim bildirimi |
+| **Dashboard Uyarıları** | Tüm sesli olaylar yazılı log |
+| **Işık Bildirimleri** | Akıllı ampullerle entegrasyon |
+
+### 👴 Yaşlı/Hareket Kısıtlı Mod
+
+| Özellik | Açıklama |
+|---------|----------|
+| **Düşme Algılama** | Ani düşme tespiti ve acil durum bildirimi |
+| **Hareketsizlik Uyarısı** | Uzun süre hareket yoksa aile üyelerine bildirim |
+| **İlaç Hatırlatma** | Görsel ilaç kutusu takibi |
+| **Rutin Takibi** | Normal rutinden sapma tespiti |
+
+### Entegrasyonlar
+
+- **Akıllı Hoparlörler**: Google Home, Amazon Alexa, Apple HomePod
+- **Giyilebilir Cihazlar**: Akıllı saat titreşim bildirimleri
+- **Akıllı Ev**: Işık, kapı kilidi, termostat kontrolü
+
+---
+
 ## 🔐 Gizlilik ve Güvenlik (Kritik)
 
 ### Temel Prensipler
@@ -255,6 +333,21 @@ HomeVision AI, evinizdeki kameralar aracılığıyla:
 - Google Nest Hub activity tracking
 - Apple Watch fitness tracking (görsel versiyon)
 - Baby monitor'ların evrimi
+- **Be My Eyes** uygulaması (görme engelliler için uzaktan yardım)
+- **Seeing AI** (Microsoft'un görme engelliler için AI uygulaması)
+
+---
+
+## 🌍 Sosyal Etki
+
+ Bu proje sadece bir "ev otomasyonu" değil, **erişilebilirlik teknolojisi** olarak düşünüldüğünde:
+
+- 🌐 Dünyada **285 milyon** görme engelli birey var (WHO)
+- 🏠 Ev içi bağımsızlık, yaşam kalitesini dramatik artırır
+- 👨‍👩‍👧 Bakıcı/aile yükünü azaltır
+- 🧓 Yaşlanan nüfus için "yerinde yaşlanma" (aging in place) imkanı
+
+> *"Teknoloji, engelleri kaldırmak için var."*
 
 ---
 
