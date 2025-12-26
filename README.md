@@ -122,48 +122,39 @@ AI: "Su sesi geliyor, banyo musluğu açık kalmış olabilir."
 ## Teknik Mimari (Konsept)
 
 ```mermaid
-graph LR
+graph TD
     subgraph Home [🏠 Ev Ortamı]
-        C1[📷 Oda 1]
-        C2[📷 Oda 2]
-        C3[📷 Oda 3]
+        C1[📷 Kamera 1] --- C2[📷 Kamera 2] --- C3[📷 Kamera 3]
     end
+
+    Home --> Hub{📽️ Video Hub}
 
     subgraph Local_Server [🔐 Yerel İşlem Katmanı - Private]
-        Hub{📽️ Video Hub}
-        
+        direction TB
+        Hub --> AI_Engine
         subgraph AI_Engine [🧠 AI Vision Engine]
-            PD[👥 Kişi Tanıma]
-            AR[🏃 Aktivite Analizi]
-            PE[🧘 Poz Tahmini]
-            OD[📦 Nesne Takibi]
+            direction LR
+            PD[👥 Kişi] --- AR[🏃 Aktivite] 
+            PE[🧘 Poz] --- OD[📦 Nesne]
         end
-        
-        DB[(🗄️ Aktivite Logları)]
-        LLM[🤖 Local LLM / RAG]
+        AI_Engine --> DB[(🗄️ Aktivite Logları)]
+        DB --> LLM[🤖 Local LLM / RAG]
     end
 
-    subgraph Interface [📱 Kullanıcı Etkileşimi]
-        UI[💻 Dashboard / API]
-        Voice[🔊 Sesli Asistan]
-        Mobile[📲 Mobil Uygulama]
-    end
+    LLM --> UI_Layer
 
-    Home --> Hub
-    Hub --> AI_Engine
-    AI_Engine --> DB
-    DB --> LLM
-    LLM --> UI
-    UI --> Voice
-    UI --> Mobile
+    subgraph UI_Layer [📱 Kullanıcı Etkileşimi]
+        direction LR
+        Voice[🔊 Sesli] --- Mobile[📲 Mobil] --- Web[💻 Web]
+    end
     
     Voice -.-> Alerts[🔔 Proaktif Uyarılar]
 
     %% Styling
-    style Home fill:#f9f9f9,stroke:#666,stroke-dasharray: 5 5
+    style Home fill:#f9f9f9,stroke:#666,stroke-width:1px
     style Local_Server fill:#e8f0fe,stroke:#1a73e8,stroke-width:2px
     style AI_Engine fill:#fff,stroke:#1a73e8,stroke-dasharray: 3 3
-    style Interface fill:#f1f8e9,stroke:#33691e,stroke-width:2px
+    style UI_Layer fill:#f1f8e9,stroke:#33691e,stroke-width:2px
     style DB fill:#fff,stroke:#333
     style LLM fill:#fff,stroke:#1a73e8
 ```
