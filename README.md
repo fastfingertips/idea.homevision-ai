@@ -122,39 +122,50 @@ AI: "Su sesi geliyor, banyo musluğu açık kalmış olabilir."
 ## Teknik Mimari (Konsept)
 
 ```mermaid
-graph TD
-    subgraph Input_Sources [Görüntü Kaynakları]
-        C1[Oda 1 Kamera]
-        C2[Oda 2 Kamera]
-        C3[Oda 3 Kamera]
+graph LR
+    subgraph Home [🏠 Ev Ortamı]
+        C1[📷 Oda 1]
+        C2[📷 Oda 2]
+        C3[📷 Oda 3]
     end
 
-    Input_Sources --> Hub{Video Stream Hub}
-
-    subgraph AI_Processing [🧠 AI İşleme Motoru]
-        Hub --> PD[Kişi Tespiti & Tanıma]
-        Hub --> AR[Aktivite Tanımlama]
-        Hub --> PE[Poz Tahmini]
-        Hub --> OD[Nesne Takibi]
+    subgraph Local_Server [🔐 Yerel İşlem Katmanı - Private]
+        Hub{📽️ Video Hub}
+        
+        subgraph AI_Engine [🧠 AI Vision Engine]
+            PD[👥 Kişi Tanıma]
+            AR[🏃 Aktivite Analizi]
+            PE[🧘 Poz Tahmini]
+            OD[📦 Nesne Takibi]
+        end
+        
+        DB[(🗄️ Aktivite Logları)]
+        LLM[🤖 Local LLM / RAG]
     end
 
-    AI_Processing --> DB[(Aktivite Log Veritabanı)]
-
-    subgraph Intelligence_Layer [🗣️ Akıllı Etkileşim]
-        DB --> LLM[LLM + RAG Engine]
-        LLM --> UI[Kullanıcı Arayüzü]
+    subgraph Interface [📱 Kullanıcı Etkileşimi]
+        UI[💻 Dashboard / API]
+        Voice[🔊 Sesli Asistan]
+        Mobile[📲 Mobil Uygulama]
     end
 
-    subgraph End_Points [Uç Noktalar]
-        UI --> Voice[Sesli Asistan]
-        UI --> Mobile[Mobil Uygulama]
-        UI --> Web[Web Dashboard]
-    end
+    Home --> Hub
+    Hub --> AI_Engine
+    AI_Engine --> DB
+    DB --> LLM
+    LLM --> UI
+    UI --> Voice
+    UI --> Mobile
+    
+    Voice -.-> Alerts[🔔 Proaktif Uyarılar]
 
-    Voice -.-> Alerts[Proaktif Uyarılar]
-    style Input_Sources fill:#f5f5f5,stroke:#333,stroke-width:2px
-    style AI_Processing fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    style Intelligence_Layer fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    %% Styling
+    style Home fill:#f9f9f9,stroke:#666,stroke-dasharray: 5 5
+    style Local_Server fill:#e8f0fe,stroke:#1a73e8,stroke-width:2px
+    style AI_Engine fill:#fff,stroke:#1a73e8,stroke-dasharray: 3 3
+    style Interface fill:#f1f8e9,stroke:#33691e,stroke-width:2px
+    style DB fill:#fff,stroke:#333
+    style LLM fill:#fff,stroke:#1a73e8
 ```
 
 ---
