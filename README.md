@@ -123,32 +123,32 @@ AI: "Su sesi geliyor, banyo musluğu açık kalmış olabilir."
 
 ```mermaid
 graph TD
-    subgraph Home [🏠 Ev Ortamı]
-        C1[📷 Kamera 1] --- C2[📷 Kamera 2] --- C3[📷 Kamera 3]
+    subgraph Home [Ev Ortami]
+        C1[Kamera 1] --- C2[Kamera 2] --- C3[Kamera 3]
     end
 
-    Home --> Hub{📽️ Video Hub}
+    Home --> Hub{Video Hub}
 
-    subgraph Local_Server [🔐 Yerel İşlem Katmanı - Private]
+    subgraph Local_Server [Yerel Islem Katmani - Private]
         direction TB
         Hub --> AI_Engine
-        subgraph AI_Engine [🧠 AI Vision Engine]
+        subgraph AI_Engine [AI Vision Engine]
             direction LR
-            PD[👥 Kişi] --- AR[🏃 Aktivite] 
-            PE[🧘 Poz] --- OD[📦 Nesne]
+            PD[Kisi] --- AR[Aktivite] 
+            PE[Poz] --- OD[Nesne]
         end
-        AI_Engine --> DB[(🗄️ Aktivite Logları)]
-        DB --> LLM[🤖 Local LLM / RAG]
+        AI_Engine --> DB[(Aktivite Loglari)]
+        DB --> LLM[Local LLM / RAG]
     end
 
     LLM --> UI_Layer
 
-    subgraph UI_Layer [📱 Kullanıcı Etkileşimi]
+    subgraph UI_Layer [Kullanici Etkilesimi]
         direction LR
-        Voice[🔊 Sesli] --- Mobile[📲 Mobil] --- Web[💻 Web]
+        Voice[Sesli] --- Mobile[Mobil] --- Web[Web]
     end
     
-    Voice -.-> Alerts[🔔 Proaktif Uyarılar]
+    Voice -.-> Alerts[Proaktif Uyarilar]
 
     %% Styling
     style Home fill:#f9f9f9,stroke:#666,stroke-width:1px
