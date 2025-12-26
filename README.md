@@ -123,40 +123,49 @@ AI: "Su sesi geliyor, banyo musluğu açık kalmış olabilir."
 
 ```mermaid
 graph TD
-    subgraph Home [Ev Ortami]
-        C1[Kamera 1] --- C2[Kamera 2] --- C3[Kamera 3]
+    subgraph Input_Layer [Giris Kaynaklari]
+        C1[Kamera 1 - Oda 1] --- C2[Kamera 2 - Oda 2] --- C3[Kamera 3 - Oda 3]
     end
 
-    Home --> Hub{Video Hub}
+    Input_Layer --> Hub{Video Stream Hub}
+    note1[Real-time Aggregation] -.-> Hub
 
-    subgraph Local_Server [Yerel Islem Katmani - Private]
+    subgraph Local_Processing [Yerel Islem Katmani - Private]
         direction TB
         Hub --> AI_Engine
-        subgraph AI_Engine [AI Vision Engine]
-            direction LR
-            PD[Kisi] --- AR[Aktivite] 
-            PE[Poz] --- OD[Nesne]
+        
+        subgraph AI_Engine [AI Vision Processing]
+            direction TB
+            PD[Person Detection & Identification]
+            AR[Action & Activity Recognition]
+            PE[Pose Estimation & Exercise Count]
+            OD[Object & Pet Detection]
         end
-        AI_Engine --> DB[(Aktivite Loglari)]
-        DB --> LLM[Local LLM / RAG]
+        
+        AI_Engine --> DB[(Activity Log Database)]
+        note2[Timestamp | Person | Action | Conf] -.-> DB
+        
+        DB --> LLM[Language Engine - LLM + RAG]
     end
 
     LLM --> UI_Layer
 
-    subgraph UI_Layer [Kullanici Etkilesimi]
+    subgraph UI_Layer [Kullanici Etkilesim Noktalari]
         direction LR
-        Voice[Sesli] --- Mobile[Mobil] --- Web[Web]
+        Voice[Sesli Asistan] --- Mobile[Mobil Uygulama] --- Web[Web Dashboard]
     end
     
-    Voice -.-> Alerts[Proaktif Uyarilar]
+    Voice -.-> Alerts[Proaktif Guvenlik ve Aktivite Uyarilari]
 
     %% Styling
-    style Home fill:#f9f9f9,stroke:#666,stroke-width:1px
-    style Local_Server fill:#e8f0fe,stroke:#1a73e8,stroke-width:2px
+    style Input_Layer fill:#f9f9f9,stroke:#666,stroke-width:1px
+    style Local_Processing fill:#e8f0fe,stroke:#1a73e8,stroke-width:2px
     style AI_Engine fill:#fff,stroke:#1a73e8,stroke-dasharray: 3 3
     style UI_Layer fill:#f1f8e9,stroke:#33691e,stroke-width:2px
     style DB fill:#fff,stroke:#333
     style LLM fill:#fff,stroke:#1a73e8
+    style note1 fill:#fffbe6,stroke:#ffe58f,font-size:11px
+    style note2 fill:#fffbe6,stroke:#ffe58f,font-size:11px
 ```
 
 ---
