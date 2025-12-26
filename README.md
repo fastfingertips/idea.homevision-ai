@@ -123,49 +123,42 @@ AI: "Su sesi geliyor, banyo musluğu açık kalmış olabilir."
 
 ```mermaid
 graph TD
-    subgraph Input_Layer [Giris Kaynaklari]
-        C1[Kamera 1 - Oda 1] --- C2[Kamera 2 - Oda 2] --- C3[Kamera 3 - Oda 3]
+    subgraph Giris_Katmani [Giris Kaynaklari]
+        C1[Kamera 1] --- C2[Kamera 2] --- C3[Kamera 3]
     end
 
-    Input_Layer --> Hub{Video Stream Hub}
-    note1[Real-time Aggregation] -.-> Hub
+    Giris_Katmani --> Hub{Stream Hub}
 
-    subgraph Local_Processing [Yerel Islem Katmani - Private]
+    subgraph Yerel_Islem [Yerel Islem Katmani - Private]
         direction TB
-        Hub --> AI_Engine
-        
-        subgraph AI_Engine [AI Vision Processing]
+        Hub --> AI_Motoru
+        subgraph AI_Motoru [AI Vision Engine]
             direction TB
-            PD[Person Detection & Identification]
-            AR[Action & Activity Recognition]
-            PE[Pose Estimation & Exercise Count]
-            OD[Object & Pet Detection]
+            PD[Kisi Tespit ve Tanima]
+            AR[Aktivite Siniflandirma]
+            PE[Poz ve Egzersiz Analizi]
+            OD[Nesne ve Pet Takibi]
         end
-        
-        AI_Engine --> DB[(Activity Log Database)]
-        note2[Timestamp | Person | Action | Conf] -.-> DB
-        
-        DB --> LLM[Language Engine - LLM + RAG]
+        AI_Motoru --> DB[(Aktivite Veritabani)]
+        DB --> RAG[Dil Motoru - LLM + RAG]
     end
 
-    LLM --> UI_Layer
+    RAG --> Arayuz
 
-    subgraph UI_Layer [Kullanici Etkilesim Noktalari]
+    subgraph Arayuz [Kullanici Etkilesimi]
         direction LR
-        Voice[Sesli Asistan] --- Mobile[Mobil Uygulama] --- Web[Web Dashboard]
+        Sesli[Sesli Asistan] --- Mobil[Mobil Uygulama] --- Web[Web Dashboard]
     end
     
-    Voice -.-> Alerts[Proaktif Guvenlik ve Aktivite Uyarilari]
+    Sesli -.-> Uyari[Proaktif Uyarilar]
 
     %% Styling
-    style Input_Layer fill:#f9f9f9,stroke:#666,stroke-width:1px
-    style Local_Processing fill:#e8f0fe,stroke:#1a73e8,stroke-width:2px
-    style AI_Engine fill:#fff,stroke:#1a73e8,stroke-dasharray: 3 3
-    style UI_Layer fill:#f1f8e9,stroke:#33691e,stroke-width:2px
+    style Giris_Katmani fill:#f9f9f9,stroke:#666,stroke-width:1px
+    style Yerel_Islem fill:#e8f0fe,stroke:#1a73e8,stroke-width:2px
+    style AI_Motoru fill:#fff,stroke:#1a73e8,stroke-dasharray: 3 3
+    style Arayuz fill:#f1f8e9,stroke:#33691e,stroke-width:2px
     style DB fill:#fff,stroke:#333
-    style LLM fill:#fff,stroke:#1a73e8
-    style note1 fill:#fffbe6,stroke:#ffe58f,font-size:11px
-    style note2 fill:#fffbe6,stroke:#ffe58f,font-size:11px
+    style RAG fill:#fff,stroke:#1a73e8
 ```
 
 ---
